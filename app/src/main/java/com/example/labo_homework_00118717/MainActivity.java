@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btn1 = findViewById(R.id.btn1);
 
-        user = findViewById(R.id.user);
+        user = findViewById(R.id.username);
         pass = findViewById(R.id.pass);
         email = findViewById(R.id.email);
         gender = findViewById(R.id.gender);
@@ -25,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent mIntent = new Intent(MainActivity.this, newActivity.class);
-                mIntent.putExtra("key1",user.getText());
-                mIntent.putExtra("key2",pass.getText());
-                mIntent.putExtra("key3",email.getText());
-                mIntent.putExtra("key4",gender.getText());
+                mIntent.putExtra("key1",user.getText().toString());
+                mIntent.putExtra("key2",pass.getText().toString());
+                mIntent.putExtra("key3",email.getText().toString());
+                mIntent.putExtra("key4",gender.getText().toString());
                 startActivity(mIntent);
             }
         });
